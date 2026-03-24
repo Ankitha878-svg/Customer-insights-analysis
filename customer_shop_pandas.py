@@ -87,23 +87,3 @@ df.to_sql(table_name, engine, if_exists="replace", index=False)
 
 print(f"Data successfully loaded into table '{table_name}'")
 
-"""
-from sqlalchemy import create_engine
-
-server = "localhost\\SQLEXPRESS03"
-database = "CUSTOMER_BEHAVIOUR"
-username = "sa"          # or your SQL login
-password = "your_password"
-
-engine = create_engine(
-    f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server"
-)
-
-df.to_sql("customer", engine, if_exists="replace", index=False)
-
-print("Data loaded successfully ✅")
-"""
-
-print(df.info())
-
-print(df.describe(include = "all"))
